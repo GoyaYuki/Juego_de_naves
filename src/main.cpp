@@ -1,12 +1,12 @@
 /* 
-   ============================================================================================
-   Materia: Laboratorio de Programación (LPR) — 5° Año
-   Institución: E.E.S.T. N° 999 "Österreichische Schule der Nationalökonomie" — Vicente López
-   Archivo: src/main.cpp
-   Actividad 8: Introducción a POO - Motor de Juego de Naves (Clases, Objetos y Constructores)
-   Docente: Mansilla Muñoz York
-   Estudiante: Murray Rothbard
-   ============================================================================================
+    ============================================================================================
+    Materia: Laboratorio de Programación (LPR) — 5° Año
+    Institución: E.E.S.T. N° 1 — Vicente López
+    Archivo: src/main.cpp
+    Actividad 8: Introducción a POO - Motor de Juego de Naves (Clases, Objetos y Constructores)
+    Docente: Mansilla Muñoz York
+    Estudiante: Goya Thiago
+    ============================================================================================
 */
 
 #include <iostream>
@@ -111,6 +111,7 @@ public:
 // PROGRAMA PRINCIPAL
 // ====================================================================
 int main() {
+    int score = 0;
     srand(time(NULL));
     
     // SISTEMA ANTI-COPIA: Petición de datos
@@ -136,6 +137,7 @@ int main() {
         // HUD CON NOMBRE DEL ESTUDIANTE
         gotoxy(2, 1); cout << "PILOTO: " << nombrePiloto << "  ";
         gotoxy(2, 2); cout << "VIDAS: " << jugador.getVidas() << "  ";
+        gotoxy(15, 2); cout << "SCORE: " << score << "  ";
 
         if (_kbhit()) {
             char tecla = tolower(_getch()); // tolower evita el problema del Bloq Mayús
@@ -173,6 +175,7 @@ int main() {
             // Colisión Bala -> Asteroide
             for (int j = 0; j < balas.size(); j++) {
                 if (asteroides[i]->getX() == balas[j]->getX() && (asteroides[i]->getY() == balas[j]->getY() || asteroides[i]->getY() + 1 == balas[j]->getY())) {
+                    score += 10;
                     gotoxy(balas[j]->getX(), balas[j]->getY()); cout << " ";
                     delete balas[j];
                     balas.erase(balas.begin() + j);

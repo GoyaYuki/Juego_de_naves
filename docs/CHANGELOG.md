@@ -7,3 +7,7 @@ Implementacion de estructura de carpetas
 ## [0.2.0] - 2026-11-18
 ### Añadido
 Implementacion de LICENSE, .gitignore, .gitattributes, main.cpp
+
+## [0.3.0] - 2026-11-18
+### Añadido
+Implementacion de funcionalidad 1 score al main.cpp
