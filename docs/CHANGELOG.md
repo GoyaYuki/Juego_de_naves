@@ -11,3 +11,7 @@ Implementacion de LICENSE, .gitignore, .gitattributes, main.cpp
 ## [0.3.0] - 2026-11-18
 ### Añadido
 Implementacion de funcionalidad 1 score al main.cpp
+
+## [0.4.0] - 2026-11-18
+### Añadido
+Implementacion de captura de ejecucion del codigo
