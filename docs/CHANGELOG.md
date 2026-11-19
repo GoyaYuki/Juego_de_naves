@@ -23,3 +23,7 @@ Implementacion de informe y manual de usuario y programador
 ## [0.6.0] - 2026-11-19
 ### Añadido
 Implementacion del README.md
+
+## [0.7.0] - 2026-11-19
+### Añadido
+modificacion de informe e implementacion del Dual-remote
